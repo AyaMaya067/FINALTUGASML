@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offensive Text Detector</title>
+</head>
+<body>
+    <h1>Offensive Text Detector</h1>
+    <form method="POST">
+        <textarea name="text" rows="4" cols="50" placeholder="Enter English or Indonesian text...">{{ user_input }}</textarea>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
