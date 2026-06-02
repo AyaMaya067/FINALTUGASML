@@ -28,5 +28,9 @@ def index():
         result = 'Offensive' if prediction == 1 else 'Not Offensive'
     return render_template('index.html', result=result, user_input=user_input)
 
-if __name__ == '__main__':
-    app.run(debug=False)
+import os
+if __name__ == "__main__":
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 5000))
+    )
