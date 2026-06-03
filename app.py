@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import joblib, re, nltk
 from nltk.corpus import stopwords
 
-#nltk.download('stopwords') #comment out when installed
+nltk.download('stopwords') #comment out when installed
 
 app = Flask(__name__)
 model=joblib.load('model.pkl') #load moeel
